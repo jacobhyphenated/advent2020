@@ -1,7 +1,7 @@
 # Advent of Code 2020
 [Advent of Code](https://adventofcode.com/2020) is a set of just for fun programming puzzles, with 50 puzzles released over 25 days. This is the repo for my solutions to these puzzles. If you haven't solved these yet, avoid spoilers by avoiding looking at the source code.
 
-###Programming Language
+### Programming Language
 These puzzles can be solved in any language. This year, I chose Rust. Why? Because I'm learning the language for fun, so why not. Of course, I'm in the very early stages of learning Rust, and that will show in this codebase. I'd like to think that I'm improving as I progress through the puzzles.
 
 ### Running the code
