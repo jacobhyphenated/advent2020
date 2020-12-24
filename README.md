@@ -1,4 +1,4 @@
-#Advent of Code 2020
+# Advent of Code 2020
 [Advent of Code](https://adventofcode.com/2020) is a set of just for fun programming puzzles, with 50 puzzles released over 25 days. This is the repo for my solutions to these puzzles. If you haven't solved these yet, avoid spoilers by avoiding looking at the source code.
 
 ###Programming Language
@@ -13,7 +13,7 @@ You will need to have Rust installed
   * `cargo run day16`
   * `cargo run day7 day11 day13 day17`
 
-#License
+# License
 BSD-3 Clause License
 
 Copyright 2020 Jacob Kanipe-Illig
