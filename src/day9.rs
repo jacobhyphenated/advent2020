@@ -1,4 +1,12 @@
+/*
+  Day 9: Encoding Error
 
+  The encoding starts with a preamble of 25 numbers. Each subsequent number should be the sum of 2 of the previous 25 numbers.
+
+  Part 1: What is the first number that does not have this property?
+
+  Part 2: Find a contiguous set of at least two numbers which sum to the invalid number from part 1.
+*/
 pub fn find_first_not_sum(cypher: &Vec<i64>, preamble_length: usize) -> i64 {
   for current_index in preamble_length..cypher.len() {
     let current_val = cypher[current_index];

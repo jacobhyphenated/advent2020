@@ -1,3 +1,30 @@
+/*
+  Day 19: Monster Messages
+
+  Rules for message input are numbered and built upon each other. Rules do not self reference and the number of matches is finite.
+
+  Example:
+    0: 4 1 5
+    1: 2 3 | 3 2
+    2: 4 4 | 5 5
+    3: 4 5 | 5 4
+    4: "a"
+    5: "b"
+
+    Possible matches include: aaaabb, aaabab, abbabb, abbbab, aabaab, aabbbb, abaaab, or ababbb.
+
+  Part 1
+  Match the received messages with the rules (puzzle input). How many messages completely match rule 0?
+
+  Part 2
+  Make the following two changes to the rules to allow for a self reference:
+    8: 42 | 42 8
+    11: 42 31 | 42 11 31
+  The list of possible matches is now hypothetically infinite.
+  But, solving for a general case is unnecessary since we know exactly what rules changed and how they are used (especially ruels 42 and 31).
+  After updating rules 8 and 11, how many messages completely match rule 0?
+*/
+
 use regex::Regex;
 use std::collections::HashMap;
 

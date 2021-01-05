@@ -1,3 +1,20 @@
+/*
+  Day 17: Conway Cubes
+
+  Part 1
+  At every 3 dimentional point, a cube is either active (#) or inactive (.)
+  The coordinates are infinite but all start as inactive except for a small region (puzzle input).
+  Cubes change state in cycles (all at the same time) considering their 26 neighbors:
+    An active cube with 2 or 3 active neighbors stays active, otherwise becomes inactive
+    an inactive cube with exactly 3 active neighbors becomes active
+  How many cubes are in an active state after 6 cycles?
+
+  Part 2
+  The coordinate space is actually 4 dimentions, not 3.
+  Each cube has 80 neighbors but the same rules for changing state from part 1 apply.
+  How many cubes are in an active state after 6 cycles?
+*/
+
 use std::collections::HashMap;
 
 pub fn active_after_6cycles(grid: &HashMap<(i32, i32, i32), char>) -> usize {

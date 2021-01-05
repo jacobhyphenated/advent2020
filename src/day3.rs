@@ -1,3 +1,9 @@
+/* 
+  Day 3: Tobaggan Trajectory
+  Given a puzzle input where . is an empty space and # is a tree,
+  count how many trees you will encounter given a specified slope (y squares down, x squares right) starting at the top left.
+  The puzzle input for each line repeats to the right an infinite number of times.
+*/
 
 pub fn count_trees_using_slope(geo: &Vec<Vec<String>>, down: usize, right: usize) -> i64 {
   let mut num_trees = 0;

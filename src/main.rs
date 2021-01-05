@@ -109,8 +109,8 @@ fn main() {
         }
         else if day == "day15" {
             let starting_numbers = day15::parse_input(&day15::read_input());
-            println!("Day 15 2020th number {}", day15::find_nth_number_memo(&starting_numbers, 2020));
-            println!("Day 15 30000000 number {}", day15::find_nth_number_memo(&starting_numbers, 30000000));
+            println!("Day 15 2020th number {}", day15::find_nth_number(&starting_numbers, 2020));
+            println!("Day 15 30000000 number {}", day15::find_nth_number(&starting_numbers, 30000000));
         }
         else if day == "day16" {
             let nearby_tickets = day16::parse_tickets(&day16::read_nearby_tickets());

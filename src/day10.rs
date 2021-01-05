@@ -1,4 +1,19 @@
 
+/*
+  Day 10: Adapter Array
+
+  Battery adapters can be used for 1, 2, or 3 "jolts" lower than its rating.
+  Your device has a build in adapter that's rated for 3 jolts higher than your largest adapter.
+  The charging outlet has a rating of 0 jolts.
+
+  Part 1
+  Use every adapter in your bag. Count the differences in jolts between each adapter.
+  What is the number of 1-jolt differences multiplied be the number of 3-jolt differences?
+
+  Part 2
+  What is the total number of distinct ways you can arrange the adapters to connect the carging outlet to your device?
+*/
+
 pub fn jolt_diff_using_all_adapters(adapters: &Vec<i64>) -> i64 {
   let mut jolt_diff1 = 0;
   let mut jolt_diff3 = 0;

@@ -1,3 +1,34 @@
+/*
+  Day 11: Seating System
+
+  The seating area is represented with empty spaces (.) or chairs that are empty (L) or occupied (#).
+  All spaces update simultaneously each round.
+
+  Part 1
+  People choose where to sit given a set of rules:
+    If a seat is empty (L) and there are no occupied seats adjacent to it, the seat becomes occupied.
+    If a seat is occupied (#) and four or more seats adjacent to it are also occupied, the seat becomes empty.
+    Otherwise, the seat's state does not change.
+  Repeat these steps each round until the there are no changes to the seating arrangments between rounds.
+  How many seats end up occupied?
+
+  Part 2
+  Instead of considering the 8 immediately adjacent seats, people instead consider the first seat they can see in each direction.
+  Example: given the below layout, the empty seat would see 8 occupied seats:
+    .......#.
+    ...#.....
+    .#.......
+    .........
+    ..#L....#
+    ....#....
+    .........
+    #........
+    ...#.....
+  It now takes five or more visible occupied seats for an occupied seat to become empty.
+  The other rules still apply.
+  Given the new visibility method and the rule change for occupied seats becoming empty, once equilibrium is reached, how many seats end up occupied?
+*/
+
 use std::cmp;
 
 #[derive(Debug, PartialEq, Clone)]

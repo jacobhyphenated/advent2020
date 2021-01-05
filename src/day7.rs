@@ -1,3 +1,13 @@
+/*
+  Day 7: Handy Haversacks
+
+  A list of baggage rules (puzzle input) specify what types of bags can be held inside other bags.
+
+  Part 1: You have a shiny gold bag. If you wanted to carry it in at least one other bag, how many different bag colors would be valid for the outermost bag?
+
+  Part 2: How many individual bags are required inside your single shiny gold bag?
+*/
+
 use std::collections::HashMap;
 use regex::Regex;
 

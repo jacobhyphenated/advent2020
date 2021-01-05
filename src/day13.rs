@@ -1,3 +1,25 @@
+/*
+  Day 13: Shuttle Search
+
+  Each bus has an ID number that also indicates how often the bus leaves for the airport.
+  Bus schedules are based on the number of minutes since some fixed reference point.
+  At time 0, every bus simultaneously departed the same location.
+
+  Part 1
+  The first line of the puzzle input is the current time, the second is the bus schedule.
+  Buses labeled with id x are not relevant.
+  What is the ID of the earliest bus you can take to the airport multiplied by the number of minutes you'll need to wait for that bus?
+
+  Part 2
+  Find the earliest timestamp such that the first bus ID departs at that time and each subsequent listed bus ID departs at that subsequent minute.
+  An x in the schedule means there are no constraints at what bus could depart at that time.
+  Example
+    given a schedule of: 7,13,x,x,59,x,31,19
+    At timestamp t, bus 7 should depart
+    At timestamp t+1, bus 13 should depart
+    At timestamp t+4, bus 59 should depart, etc.
+  What is the earliest timestamp such that all of the listed bus IDs depart at offsets matching their positions in the list?
+*/
 
 pub fn earliest_bus(start_time: i32, bus_ids: &Vec<i32>) -> i32 {
   let mut earliest_id = 0;

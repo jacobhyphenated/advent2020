@@ -1,3 +1,35 @@
+/*
+  Day 6: Custom Customs
+
+  Letters a-z represent answers given by each person in a family. Two line breaks indicate the end of the family unit.
+
+  Part 1: Count each unique answer for each family.
+  Examples:
+  abc
+    has 3
+  a
+  b
+  c
+    has 3
+  ab
+  ac
+    has 3
+  Add the totals for all families together
+
+  Part 2
+  Instead of counting answers from anyone in the family, count answers provided by everyone in the family
+  abc
+    has 3
+  a
+  b
+  c
+    has 0
+  ab
+  ac
+    has 1
+  Add the totals for all families together.
+*/
+
 use std::collections::HashSet;
 
 pub fn unique_family_answers(family: &Vec<String>) -> usize {

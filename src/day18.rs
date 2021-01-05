@@ -1,3 +1,27 @@
+/*
+  Day 18: Operation Order
+
+  The puzzle input consists of multiplication, addition, and parenthesis. However, order of operations has changed.
+
+  Part 1
+  Multiplication and addition have the same precedence. Parenthesis resolve first.
+  Ex)
+    1 + (2 * 3) + (4 * (5 + 6))
+      1 +    6  + (4 * (5 + 6))
+          7     + (4 * (5 + 6))
+          7     + (4 *   11   )
+          7     +     44
+                51
+  Evaluate each line in the puzzle input. What is the sum of the resulting values?
+
+  Part 2
+  Now, addition is evaluated before multiplication
+  Examples:
+    2 * 3 + (4 * 5) becomes 46.
+    5 + (8 * 3 + 9 + 3 * 4 * 3) becomes 1445.
+  Evaluate each line in the puzzle input. What is the sum of the resulting values?
+*/
+
 use regex::Regex;
 
 pub fn sum_all_expressions(expressions: &Vec<Vec<String>>) -> i64 {

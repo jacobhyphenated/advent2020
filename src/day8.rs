@@ -1,3 +1,19 @@
+/*
+  Day 8: Handheld Halting
+
+  A handheld game code consists of a series of instructions
+  - acc increases or decreases a single global value called the accumulator by the value given in the argument. For example, acc +7 would increase the accumulator by 7. The accumulator starts at 0. After an acc instruction, the instruction immediately below it is executed next.
+  - jmp jumps to a new instruction relative to itself. The next instruction to execute is found using the argument as an offset from the jmp instruction; for example, jmp +2 would skip the next instruction, jmp +1 would continue to the instruction immediately below it, and jmp -20 would cause the instruction 20 lines above to be executed next.
+  - nop stands for No OPeration - it does nothing. The instruction immediately below it is executed next.
+
+  Part 1
+  The program has in infinute loop. What is the value in the accumulator immidiately before an instruction is run a second time?
+
+  Part 2
+  Exactly one instruction is wrong. Either a jmp is supposed to be a nop, or a nop is supposed to be a jmp.
+  Find the incorrect instruction and change it. What is the value in a accumulator when the program terminates?
+*/
+
 #[derive(Debug, PartialEq, Clone)]
 pub enum Insruction {
   Nop,

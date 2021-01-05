@@ -1,3 +1,43 @@
+/*
+  Day 14: Docking Data
+
+  The docking program (puzzle input) can either update a bitmask or write a value to memory.
+  The values are 36 bit integers. The bitmask is applied to values immediately before they are written to memory.
+
+  Part 1
+  The bitmask of 0 or 1 overwrites the corresponding bit of the value, while an X leaves the bit unchanged.
+  Example:
+    mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
+    mem[8] = 11
+
+    value:  000000000000000000000000000000001011  (decimal 11)
+    mask:   XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
+    result: 000000000000000000000000000001001001  (decimal 73)
+  What is the sum of all values left in memory after it completes?
+
+  Part 2
+  Rather than modifying the bit, the mask acts as a memory address decoder.
+    if the bitmask bit is 0, the corresponding bit in the value is unchanged
+    if the bitmask bit is 1, the corresponding bit in the value is overwritten with a 1
+    if the bitmask bit is an X, the corresponding bit in the value is floating
+    A floating bit will take on all possible values, potentially causing many different memory addresses to be written to at once.
+  Example:
+    mask = 000000000000000000000000000000X1001X
+    mem[42] = 100
+
+    address: 000000000000000000000000000000101010  (decimal 42)
+    mask:    000000000000000000000000000000X1001X
+    result:  000000000000000000000000000000X1101X
+
+    After applying the mask, two bits are floating leaving 4 possible memory addresses:
+    000000000000000000000000000000011010  (decimal 26)
+    000000000000000000000000000000011011  (decimal 27)
+    000000000000000000000000000000111010  (decimal 58)
+    000000000000000000000000000000111011  (decimal 59)
+    The value 100 is written to each of these 4 addresses.
+  What is the sum of all values left in memory after it completes?
+*/
+
 use std::i64;
 use regex::Regex;
 use std::collections::HashMap;

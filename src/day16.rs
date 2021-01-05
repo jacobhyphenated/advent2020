@@ -1,6 +1,24 @@
+/*
+  Day 16: Ticket Translation
+
+  You know the numbers on the ticket, but not what they mean.
+  You have a list of tickets (puzzle input), and the order of fields on all tickets are the same.
+  Another part of the input is the rules for valid numbers for each ticket field.
+
+  Part 1
+  A ticket is invalid if one of the numbers could not possibly be used in any field given the validation rules.
+  Find all invalid numbers in the tickets and multiply them together for the ticket scanning error rate.
+  What is the ticket scanning error rate?
+
+  Part 2
+  Discard all invalid tickets.
+  Determine what numbers correspond to what fields in the tickets using the valid ranges for each field.
+  Then apply that to your ticket.
+  On your ticket, get all fields that start with the word departure (6 fields) and multiply their values.
+*/
+
 use std::collections::HashMap;
 use std::collections::HashSet;
-
 
 pub fn ticket_scanning_error_rate(rules: &HashMap<String, Vec<i32>>, tickets: &Vec<Vec<i32>>) -> i32 {
   let mut error_rate = 0;
